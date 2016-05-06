@@ -1,0 +1,51 @@
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+ext {
+    //Android
+    androidBuildToolsVersion = "23.0.3"
+    androidMinSdkVersion = 14
+    androidTargetSdkVersion = 23
+    androidCompileSdkVersion = 23
+
+    //Libraries
+    //android support part
+    androidDesignVersion = '23.3.0'
+    androidSupportV4Version = '23.3.0'
+    androidGridLayoutVersion = '23.3.0'
+    androidAppCompatVersion = '23.3.0'
+    androidCardViewVersion = '23.3.0'
+    androidRecyclerViewVersion = '23.3.0'
+    androidAnnotationsVersion = '23.3.0'
+
+    //other popular libraries
+    bufferNifeVersion = '8.0.1'
+
+    //Testing
+    jUnitVersion = '4.12'
+
+    //Development
+    leakCanaryVersion = '1.3.1'
+
+    appDependencies = [
+            androidAppcompat   : "com.android.support:appcompat-v7:${androidAppCompatVersion}",
+            bufferNife         : "com.jakewharton:butterknife:${bufferNifeVersion}",
+            bufferNifeApt      : "com.jakewharton:butterknife-compiler:${bufferNifeVersion}",
+            androidRecyclerView: "com.android.support:recyclerview-v7:${androidRecyclerViewVersion}"
+    ]
+
+    fontableTextViewDependencies = [
+            androidAppcompat: "com.android.support:appcompat-v7:${androidAppCompatVersion}"
+    ]
+
+    testDependencies = [
+            junit: "junit:junit:${jUnitVersion}",
+    ]
+
+    developmentDependencies = [
+            leakCanary: "com.squareup.leakcanary:leakcanary-android:${leakCanaryVersion}",
+    ]
+}
