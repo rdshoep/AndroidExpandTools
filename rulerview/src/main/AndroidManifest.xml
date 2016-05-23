@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.rdshoep.android.fontableTextView">
+    package="com.rdshoep.android.rulerView">
 
     <application
         android:allowBackup="true"

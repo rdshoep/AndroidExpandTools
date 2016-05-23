@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="30dp">
+
+    <TextView
+        android:id="@android:id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <com.rdshoep.android.view.RulerView
+        android:id="@id/rulerView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="50dp"
+        android:background="@android:color/black"
+        app:align="end"
+        app:contentPadding="3dp"
+        app:displayValueLevel="3"
+        app:initValue="60"
+        app:interval="10dp"
+        app:labelFontColor="@android:color/white"
+        app:labelFontSize="15sp"
+        app:labelOffset="50dp"
+        app:maxValue="100"
+        app:minValue="40"
+        app:order="desc"
+        app:orientation="horizontal"
+        app:pointerDrawable="@drawable/ruler_pointer_horizontal"
+        app:tickColor="#eeeeee"
+        app:tickFormat="4111131111"
+        app:tickValue="1"
+        app:tickWidth="2dp"
+        app:unitHeight="5dp" />
+
+    <!--app:frontDrawable="@drawable/ruler_front_shade"-->
+    <!--app:pointerDrawable="@drawable/ruler_pointer"-->
+</LinearLayout>

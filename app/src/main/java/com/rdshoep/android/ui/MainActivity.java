@@ -10,6 +10,7 @@ import com.rdshoep.android.pojo.SimpleItem;
 import com.rdshoep.android.ui.activities.FragmentContainerActivity;
 import com.rdshoep.android.ui.adapter.SimpleListAdapter;
 import com.rdshoep.android.ui.fragments.FontableTextViewFragment;
+import com.rdshoep.android.ui.fragments.RulerViewFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,6 +35,8 @@ public class MainActivity extends AppCompatActivity implements SimpleListAdapter
         //初始化显示的功能
         simpleItemList.add(new SimpleItem("FontableTextView", "支持各种字体的设置，使界面显示更加自由!"
                 , FontableTextViewFragment.class.getName()));
+        simpleItemList.add(new SimpleItem("RulerView", "个性化的Android尺子插件"
+                , RulerViewFragment.class.getName()));
 
         mAdapter = new SimpleListAdapter();
         mAdapter.setItemList(simpleItemList);

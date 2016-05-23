@@ -41,6 +41,14 @@ ext {
             androidAppcompat: "com.android.support:appcompat-v7:${androidAppCompatVersion}"
     ]
 
+    rulerViewDependencies = [
+            androidAppcompat: "com.android.support:appcompat-v7:${androidAppCompatVersion}"
+    ]
+
+    utilDependencies = [
+            androidAnnotations: "com.android.support:support-annotations:${androidAnnotationsVersion}"
+    ]
+
     testDependencies = [
             junit: "junit:junit:${jUnitVersion}",
     ]

@@ -1,1 +1,1 @@
-include ':app', ':fontabletextview'
+include ':app', ':fontabletextview', ':rulerview', ':utils'

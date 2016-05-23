@@ -1,14 +1,4 @@
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
-    }
-}
-
-apply plugin: 'com.android.application'
-apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'com.android.library'
 
 android {
     def globalConfiguration = rootProject.extensions.getByName("ext")
@@ -20,7 +10,6 @@ android {
         minSdkVersion globalConfiguration.getAt("androidMinSdkVersion")
         targetSdkVersion globalConfiguration.getAt("androidTargetSdkVersion")
 
-        applicationId globalConfiguration.getAt("androidApplicationId")
         versionCode globalConfiguration.getAt("androidVersionCode")
         versionName globalConfiguration.getAt("androidVersionName")
     }
@@ -36,15 +25,9 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
-    def appDependencies = rootProject.ext.appDependencies
-    compile appDependencies.androidAppcompat
-    compile appDependencies.androidRecyclerView
-    compile appDependencies.bufferNife
-    apt appDependencies.bufferNifeApt
+    def utilDependencies = rootProject.ext.utilDependencies
+    compile utilDependencies.androidAnnotations
 
     def testDependencies = rootProject.ext.testDependencies
     testCompile testDependencies.junit
-
-    compile project(":fontabletextview")
-    compile project(":rulerview")
 }

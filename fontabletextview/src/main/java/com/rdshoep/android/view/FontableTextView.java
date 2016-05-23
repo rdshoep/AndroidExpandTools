@@ -1,4 +1,5 @@
 package com.rdshoep.android.view;
+
 /*
  * @description
  *   Please write the FontableTextView module's description
@@ -14,6 +15,8 @@ import android.content.res.TypedArray;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.widget.TextView;
+
+import com.rdshoep.android.fontableTextView.R;
 
 public class FontableTextView extends TextView {
     public FontableTextView(Context context) {
