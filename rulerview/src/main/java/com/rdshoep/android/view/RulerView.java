@@ -87,7 +87,8 @@ public class RulerView extends View implements GestureDetector.OnGestureListener
 
     //足够滑动的可显示Bitmap
     Bitmap fullTickContentMap;
-    int[] tickInjectMap = {4, 1, 2, 1, 2, 1, 2, 1, 2, 1, 3, 1, 2, 1, 2, 1, 2, 1, 2, 1};
+    //    int[] tickInjectMap = {4, 1, 2, 1, 2, 1, 2, 1, 2, 1, 3, 1, 2, 1, 2, 1, 2, 1, 2, 1};
+    int[] tickInjectMap = {3, 1, 1, 1, 1, 2, 1, 1, 1, 1};
     Bitmap[] tickBitmapArray = new Bitmap[5];
 
     GestureDetector gestureDetector;
@@ -412,6 +413,15 @@ public class RulerView extends View implements GestureDetector.OnGestureListener
         Log.d(TAG, "onDraw: curValue-----end" + curValue);
     }
 
+    /**
+     * 画刻度尺
+     *
+     * @param canvas
+     * @param paint
+     * @param contentLength
+     * @param contentHeight
+     * @param displaySpanValue
+     */
     private void drawTickMark(Canvas canvas, Paint paint, int contentLength, int contentHeight, float displaySpanValue) {
         float minSpanValue = curValue - minValue;
         float maxSpanValue = maxValue - curValue;

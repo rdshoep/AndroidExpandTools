@@ -14,7 +14,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.rdshoep.android.R;
 import com.rdshoep.android.view.RulerView;
@@ -26,8 +25,6 @@ public class RulerViewFragment extends Fragment implements RulerView.OnValueChan
 
     @BindView(R.id.rulerView)
     RulerView rulerView;
-    @BindView(android.R.id.text1)
-    TextView textView;
 
     @Nullable
     @Override
@@ -50,6 +47,5 @@ public class RulerViewFragment extends Fragment implements RulerView.OnValueChan
 
     @Override
     public void onValueChanged(float value, boolean isFinalValue) {
-        textView.setText(String.format("%f, %b", value, isFinalValue));
     }
 }

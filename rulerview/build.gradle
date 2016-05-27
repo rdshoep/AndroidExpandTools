@@ -33,3 +33,5 @@ dependencies {
     def testDependencies = rootProject.ext.testDependencies
     testCompile testDependencies.junit
 }
+
+apply from: 'https://raw.githubusercontent.com/rdshoep/gradle-publish/master/bintray.gradle'
