@@ -45,6 +45,6 @@ dependencies {
     def testDependencies = rootProject.ext.testDependencies
     testCompile testDependencies.junit
 
-    compile project(":fontabletextview")
-    compile project(":rulerview")
+    compile "com.rdshoep.android:fontabletextview:1.0"
+    compile "com.rdshoep.android:rulerview:1.0"
 }

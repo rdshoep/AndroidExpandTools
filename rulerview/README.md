@@ -10,7 +10,7 @@
 8.支持封面
 9.支持为每个级别的刻度都设置相对应的指针图像资源
 
-可以直接添加<code>compile 'com.rdshoep.android:RulerView:1.0'</code>，将RulerView添加到项目中去
+可以直接添加<code>compile 'com.rdshoep.android:rulerview:1.1'</code>，将RulerView添加到项目中去
 
 ```[xml]
 
