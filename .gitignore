@@ -18,6 +18,8 @@ build/
 gradle*
 !gradle.properties
 
+!gradle.properties
+
 # Local configuration file (sdk path, etc)
 local.properties
 

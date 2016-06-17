@@ -1,19 +1,6 @@
 apply plugin: 'com.android.library'
 
 android {
-    def globalConfiguration = rootProject.extensions.getByName("ext")
-
-    compileSdkVersion globalConfiguration.getAt("androidCompileSdkVersion")
-    buildToolsVersion globalConfiguration.getAt("androidBuildToolsVersion")
-
-    defaultConfig {
-        minSdkVersion globalConfiguration.getAt("androidMinSdkVersion")
-        targetSdkVersion globalConfiguration.getAt("androidTargetSdkVersion")
-
-        versionCode globalConfiguration.getAt("androidVersionCode")
-        versionName globalConfiguration.getAt("androidVersionName")
-    }
-
     buildTypes {
         release {
             minifyEnabled false
@@ -25,13 +12,10 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
-    compile project(':utils')
-
-    def rulerViewDependencies = rootProject.ext.rulerViewDependencies
-    compile rulerViewDependencies.androidAppcompat
+    compile 'com.rdshoep.android:utils:1.0'
 
     def testDependencies = rootProject.ext.testDependencies
     testCompile testDependencies.junit
 }
 
-apply from: 'https://raw.githubusercontent.com/rdshoep/gradle-publish/master/bintray.gradle'
+apply from: '../base.gradle'
