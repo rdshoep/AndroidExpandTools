@@ -46,5 +46,6 @@ dependencies {
     testCompile testDependencies.junit
 
     compile "com.rdshoep.android:fontabletextview:1.0"
-    compile "com.rdshoep.android:rulerview:1.0"
+//    compile "com.rdshoep.android:rulerview:1.2"
+    compile project(':rulerview')
 }

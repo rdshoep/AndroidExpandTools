@@ -16,7 +16,7 @@
             android:id="@id/rulerView"
             android:layout_width="300dp"
             android:layout_height="100dp"
-            android:padding="3dp"
+            android:padding="5dp"
             android:background="@android:color/black"
             app:align="end"
             app:displayValueLevel="3"
