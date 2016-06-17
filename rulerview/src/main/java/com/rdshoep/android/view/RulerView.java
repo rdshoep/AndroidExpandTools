@@ -172,11 +172,10 @@ public class RulerView extends View implements GestureDetector.OnGestureListener
             labelFontColor = a.getColor(R.styleable.RulerView_labelFontColor, labelFontColor);
             labelOffset = a.getDimensionPixelSize(R.styleable.RulerView_labelOffset, labelOffset);
 
-            int contentPadding = a.getDimensionPixelSize(com.android.internal.R.styleable.View_padding, 0);
-            contentPaddingLeft = a.getDimensionPixelSize(com.android.internal.R.styleable.View_paddingLeft, contentPadding);
-            contentPaddingTop = a.getDimensionPixelSize(com.android.internal.R.styleable.View_paddingTop, contentPadding);
-            contentPaddingRight = a.getDimensionPixelSize(com.android.internal.R.styleable.View_paddingRight, contentPadding);
-            contentPaddingBottom = a.getDimensionPixelSize(com.android.internal.R.styleable.View_paddingBottom, contentPadding);
+            contentPaddingLeft = getPaddingLeft();
+            contentPaddingTop = getPaddingTop();
+            contentPaddingRight = getPaddingRight();
+            contentPaddingBottom = getPaddingBottom();
 
             Drawable pointerDrawable = a.getDrawable(R.styleable.RulerView_pointerDrawable);
             if (pointerDrawable != null) {
