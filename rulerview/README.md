@@ -56,12 +56,6 @@
     <attr name="tick3" format="reference" />
     <attr name="tick4" format="reference" />
 
-    <attr name="contentPadding" format="dimension|reference" />
-    <attr name="contentPaddingLeft" format="dimension|reference" />
-    <attr name="contentPaddingTop" format="dimension|reference" />
-    <attr name="contentPaddingRight" format="dimension|reference" />
-    <attr name="contentPaddingBottom" format="dimension|reference" />
-
     <!--布局方向   水平/竖直-->
     <attr name="orientation" format="enum">
         <enum name="horizontal" value="1" />
@@ -82,6 +76,11 @@
         <enum name="desc" value="2" />
     </attr>
 '''
+
+### Change list
+#1.2
+* Remove rulerStyle attribute "contentPadding,contentPaddingLeft,contentPaddingRight,contentPaddingTop,contentPaddingBottom"
+* change "orientation" ==> "direction", solve duplicate attribute problem with other aar package
 
 ### Todo List
 * 尺子的起始值不为整数倍的集合单元（不为整数值）

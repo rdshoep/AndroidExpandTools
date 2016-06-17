@@ -43,14 +43,8 @@
         <attr name="tick3" format="reference" />
         <attr name="tick4" format="reference" />
 
-        <attr name="contentPadding" format="dimension|reference" />
-        <attr name="contentPaddingLeft" format="dimension|reference" />
-        <attr name="contentPaddingTop" format="dimension|reference" />
-        <attr name="contentPaddingRight" format="dimension|reference" />
-        <attr name="contentPaddingBottom" format="dimension|reference" />
-
         <!--布局方向   水平/竖直-->
-        <attr name="orientation" format="enum">
+        <attr name="direction" format="enum">
             <enum name="horizontal" value="1" />
             <enum name="vertical" value="2" />
         </attr>

@@ -163,7 +163,7 @@ public class RulerView extends View implements GestureDetector.OnGestureListener
             //默认显示数值的Level
             displayValueLevel = a.getInteger(R.styleable.RulerView_displayValueLevel, displayValueLevel);
 
-            orientation = a.getInt(R.styleable.RulerView_orientation, orientation);
+            orientation = a.getInt(R.styleable.RulerView_direction, orientation);
             align = a.getInt(R.styleable.RulerView_align, align);
             //根据水平/垂直方向设置数值方向
             order = a.getInt(R.styleable.RulerView_order, orientation == HORIZONTAL ? ASC : DESC);
@@ -172,11 +172,11 @@ public class RulerView extends View implements GestureDetector.OnGestureListener
             labelFontColor = a.getColor(R.styleable.RulerView_labelFontColor, labelFontColor);
             labelOffset = a.getDimensionPixelSize(R.styleable.RulerView_labelOffset, labelOffset);
 
-            int contentPadding = a.getDimensionPixelSize(R.styleable.RulerView_contentPadding, 0);
-            contentPaddingLeft = a.getDimensionPixelSize(R.styleable.RulerView_contentPaddingLeft, contentPadding);
-            contentPaddingTop = a.getDimensionPixelSize(R.styleable.RulerView_contentPaddingTop, contentPadding);
-            contentPaddingRight = a.getDimensionPixelSize(R.styleable.RulerView_contentPaddingRight, contentPadding);
-            contentPaddingBottom = a.getDimensionPixelSize(R.styleable.RulerView_contentPaddingBottom, contentPadding);
+            int contentPadding = a.getDimensionPixelSize(com.android.internal.R.styleable.View_padding, 0);
+            contentPaddingLeft = a.getDimensionPixelSize(com.android.internal.R.styleable.View_paddingLeft, contentPadding);
+            contentPaddingTop = a.getDimensionPixelSize(com.android.internal.R.styleable.View_paddingTop, contentPadding);
+            contentPaddingRight = a.getDimensionPixelSize(com.android.internal.R.styleable.View_paddingRight, contentPadding);
+            contentPaddingBottom = a.getDimensionPixelSize(com.android.internal.R.styleable.View_paddingBottom, contentPadding);
 
             Drawable pointerDrawable = a.getDrawable(R.styleable.RulerView_pointerDrawable);
             if (pointerDrawable != null) {
