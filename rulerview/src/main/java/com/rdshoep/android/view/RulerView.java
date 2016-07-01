@@ -364,16 +364,21 @@ public class RulerView extends View implements GestureDetector.OnGestureListener
      */
     public void setValue(float value, boolean adaptive) {
         if (adaptive) {
-            value = Math.min(maxValue, Math.max(value, minValue));
+            this.curValue = Math.min(maxValue, Math.max(value, minValue));
         } else {
             if (value < minValue || value > maxValue) {
                 throw new RuntimeException("value is invalid, it must be in the range(minValue ~ maxValue)");
             }
+
+            this.curValue = value;
         }
 
-        this.curValue = value;
-        invalidate();
-
+        //如果当前值和设置的值相等，则表示当前值进行了自适应变更，需要通知listener
+        if (this.curValue != value) {
+            triggerValueChanged();
+        } else {
+            postInvalidate();
+        }
     }
 
     public void setValue(float value) {
